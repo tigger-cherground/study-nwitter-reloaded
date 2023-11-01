@@ -16,7 +16,8 @@ const Column = styled.div`
 const Photo = styled.img`
     width: 100px;
     height: 100px;
-    border-radius: 15px;;
+    border-radius: 15px;
+    float: right;
 `;
 
 const Username = styled.span`
