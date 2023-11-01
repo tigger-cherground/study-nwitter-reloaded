@@ -86,8 +86,8 @@ export default function PostTweetForm() {
         });
 
         if (file) {
-            const locationRef = ref(storage, `study-tweets/${user.uid}-${user.displayName}/${doc.id}`);
-            const result = await uploadBytes(locationRef, file);
+            const locationRef = ref(storage, `study-tweets/${user.uid}/${doc.id}`);
+            const result = await uploadBytes(locationRef, file); 
             const url = await getDownloadURL(result.ref);
             await updateDoc(doc, {
                 photo: url
